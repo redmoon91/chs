@@ -1,0 +1,120 @@
+<header class="loc" data-audience="grandview" data-sitemap="default">
+    <div class="container">
+    <nav class="primary navbar navbar-expand-lg cs-nav-main" role="navigation" aria-label="Main menu">
+            <a href="/"><img src="$!{site.logo.rawUri}" alt="$!{site.title}" aria-label="image" width="285"></a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                #set($list = $navtool.getNav("/"))
+                #foreach($n in $list)
+                    #set($children = $n.children)
+                    #if($children && $children.size() > 0)
+                        <li class="nav-item dropdown #if($n.active) active #end">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                ${n.title}
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                #foreach($ch in $children)
+                                    <a class="dropdown-item #if($ch.active) active #end" href="${ch.href}" target="${ch.target}">${ch.title}</a>
+                                #end
+                            </div>
+                            #if(!$foreach.hasNext)
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Start Free Trial
+                                </a>
+                            #end
+                        </li>
+                    #else
+                        <li class="nav-item #if($n.active) active #end"><a class="nav-link" href='${n.href}' target='${n.target}'>${n.title}</a></li>
+                    #end
+                #end
+            </ul>        
+    </nav>
+     </div>       
+    ## ADD REORDER MENU BUTTON
+    #if ($EDIT_MODE && $PUBLISH_HTMLPAGE_PERMISSION)
+        #set($_formId="dot_form_menu_$date.date.time")
+        #set ($folder = $folderAPI.findCurrentFolder($startFromPath, $host))
+        #set ($menuId = $folder.inode)       
+            #orderMenu()
+    #end
+
+    <nav class="secondary">
+        <div class="inner" role="navigation" aria-label="Secondary Menu">
+            <ul id="ctaNav" role="menubar" aria-hidden="false">
+                <span><!--<li><a href="/Grandview/emergency-updates.aspx">EMERGENCY UPDATES</a>-->
+                <li><a href="tel:$!{mainHospital.phone}" style="display: none;">$!{mainHospital.phone}</a><span class="txt-num">$!{mainHospital.phone}</span></li>
+                <li><a href="/Grandview/online-scheduling.aspx?utm_campaign=chs-ols&amp;utm_source=grandview&amp;utm_medium=navigation">Online Scheduling</a></li>
+                <li><a href="/Grandview/online-bill-pay.aspx">Online Bill Pay</a></li>
+                <!--<li><a href="/Grandview/online-pre-registration.aspx">Online Pre-Registration</a></li>-->
+                <li><a href="/Grandview/hospital-patient-portal.aspx">Patient Portal</a></li>
+                <li><a href="/Grandview/classes-events.aspx">Events</a></li>
+                <!--<li><a href="/Grandview/locations.aspx">Directions</a></li>-->
+                <li class="last"><a href="/Grandview/contact.aspx">Contact</a></li></span>
+                <!--li class="srch last" role="menuitem" aria-haspopup="true"--><!--a href="#" aria-label="Search"><em class="fa fa-search" aria-hidden="true" title="Search"></em></a-->
+                <!--ul class="drop-down" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'HtmlSearchGo_siteSearchBtn')" role="menu" data-test="true" aria-hidden="true"-->
+                <li id="desktopSearch" role="menuitem" class="last">
+                    <input type="hidden" name="cpsys_FormItem_siteSearch_chsSearchPostModuleIds" id="cpsys_FormItem_siteSearch_chsSearchPostModuleIds">
+                    <label for="siteSearchBtn" hidden="true">Submit</label>
+                    <input type="submit" name="cpsys_FormItem_siteSearch_chsSiteSearchButton" value="Search" onclick="$('form').trigger('cp-save', [event]);$('form').trigger('cp-formspost', [event]);return false;" id="cpsys_FormItem_siteSearch_chsSiteSearchButton">
+                    <label for="siteSearchTxt" hidden="true">Search</label>
+                    
+                    
+                    <script src="/custom/javascript/website_search.js" type="text/javascript"></script>
+                    <input type="text" id="siteSearchTxt" name="chsSearchPostCriteria" placeholder="Search..." autocomplete="off" class="ui-autocomplete-input"><em id="siteSearchBtn" class="fa fa-search" aria-hidden="true"></em>
+                </li>
+                <!--/ul-->
+                <!--/li-->
+            </ul>
+        </div>
+    </nav>
+    </div>
+</header>
+
+#*
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                #set($list = $navtool.getNav("/"))
+                #foreach($n in $list)
+                    #set($children = $n.children)
+                    #if($children && $children.size() > 0)
+                        <li class="nav-item dropdown #if($n.active) active #end">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                ${n.title}
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                #foreach($ch in $children)
+                                    <a class="dropdown-item #if($ch.active) active #end" href="${ch.href}" target="${ch.target}">${ch.title}</a>
+                                #end
+                            </div>
+                            #if(!$foreach.hasNext)
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Start Free Trial
+                                </a>
+                            #end
+                        </li>
+                    #else
+                        <li class="nav-item #if($n.active) active #end"><a class="nav-link" href='${n.href}' target='${n.target}'>${n.title}</a></li>
+                    #end
+                #end
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+            
+    ## ADD REORDER MENU BUTTON
+    #if ($EDIT_MODE && $PUBLISH_HTMLPAGE_PERMISSION)
+        #set($_formId="dot_form_menu_$date.date.time")
+        #set ($folder = $folderAPI.findCurrentFolder($startFromPath, $host))
+        #set ($menuId = $folder.inode)       
+            #orderMenu()
+    #end
+*#

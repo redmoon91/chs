@@ -1,0 +1,72 @@
+{
+  "clazz" : "DotAssetContentType",
+  "id" : "c77450b834901a20c8193ef9d561ee5b",
+  "name" : "Video",
+  "variable" : "Video",
+  "modDate" : "2024-08-15T01:38:56.000+00:00",
+  "iDate" : "2022-10-13T22:06:44.000+00:00",
+  "host" : "8a7d5e23-da1e-420a-b4f0-471e7da8ea2d",
+  "folder" : "SYSTEM_FOLDER",
+  "siteName" : "grandview.dotcms.io",
+  "folderPath" : "/",
+  "icon" : "file_copy",
+  "description" : "Media video file content",
+  "baseType" : "DOTASSET",
+  "fields" : [ {
+    "clazz" : "HostFolderField",
+    "searchable" : true,
+    "indexed" : true,
+    "id" : "add79c4eb798bb80e539229ed158c824",
+    "modDate" : "2024-08-15T01:35:46.000+00:00",
+    "name" : "Site or Folder",
+    "variable" : "hostFolder",
+    "fieldType" : "Host-Folder",
+    "fieldTypeLabel" : "Site or Folder",
+    "iDate" : "2022-10-13T22:06:44.000+00:00",
+    "dataType" : "SYSTEM"
+  }, {
+    "clazz" : "BinaryField",
+    "searchable" : true,
+    "indexed" : true,
+    "listed" : true,
+    "id" : "fe416dcd4e400d596dcd581f75a51bd6",
+    "modDate" : "2024-08-15T01:35:46.000+00:00",
+    "name" : "Asset",
+    "variable" : "asset",
+    "required" : true,
+    "sortOrder" : 1,
+    "fixed" : true,
+    "fieldType" : "Binary",
+    "fieldTypeLabel" : "Binary",
+    "fieldVariables" : [ {
+      "clazz" : "com.dotcms.contenttype.model.field.ImmutableFieldVariable",
+      "id" : "a4c308be-5ef9-4fca-834c-9d8b97267605",
+      "fieldId" : "fe416dcd4e400d596dcd581f75a51bd6",
+      "name" : null,
+      "key" : "accept",
+      "value" : "video/*",
+      "userId" : null,
+      "modDate" : null
+    } ],
+    "iDate" : "2022-10-13T22:06:44.000+00:00",
+    "dataType" : "SYSTEM"
+  }, {
+    "clazz" : "TagField",
+    "searchable" : true,
+    "indexed" : true,
+    "id" : "194b033a5e8357d01fe3d0fca0d44640",
+    "modDate" : "2024-08-15T01:35:46.000+00:00",
+    "name" : "Tags",
+    "variable" : "tags",
+    "sortOrder" : 2,
+    "fieldType" : "Tag",
+    "fieldTypeLabel" : "Tag",
+    "iDate" : "2022-10-13T22:06:44.000+00:00",
+    "dataType" : "SYSTEM"
+  } ],
+  "workflows" : [ {
+    "id" : "d61a59e1-a49c-46f2-a929-db2b4bfa88b2",
+    "variableName" : "SystemWorkflow"
+  } ],
+  "dotCMSObjectType" : "ContentType"
+}

@@ -1,0 +1,22 @@
+<div style="font-size: 12px;line-height: 12px;margin: -10px 0 20px 0;">Characters Remaining <span id="charactersRemaining-${fieldId}" style="font-weight: bold;padding: 0 5px;">$maxChar</span> <i>(Max Char $maxChar)</i></div>
+<style>#${fieldId}Count_tag{display: none;}#seoDescriptionCount_tag{display: none;}</style>
+<script>
+    var el;                                                    
+    function countCharacters${fieldId}(e) {                                    
+        var textEntered, countRemaining, counter;          
+        textEntered = document.getElementById('$fieldId').value;  
+        counter = ($maxChar - (textEntered.length));
+        countRemaining = document.getElementById('charactersRemaining-${fieldId}'); 
+        countRemaining.textContent = counter;
+        if(counter >= 0) {
+            document.getElementById('charactersRemaining-${fieldId}').style.color = "black";
+        }else{
+            document.getElementById('charactersRemaining-${fieldId}').style.color = "red";
+        }
+    }
+
+    dojo.addOnLoad(function(){
+        countCharacters${fieldId}();
+        dojo.connect(dojo.byId("$fieldId"), "keyup", null, "countCharacters${fieldId}");
+    });
+</script>

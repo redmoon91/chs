@@ -1,0 +1,62 @@
+{
+  "clazz" : "SimpleContentType",
+  "id" : "2a3e91e4-fbbf-4876-8c5b-2233c1739b05",
+  "name" : "Content (Generic)",
+  "variable" : "webPageContent",
+  "modDate" : "2024-08-15T01:38:47.000+00:00",
+  "iDate" : "2017-03-09T14:51:36.000+00:00",
+  "host" : "SYSTEM_HOST",
+  "folder" : "SYSTEM_FOLDER",
+  "siteName" : "systemHost",
+  "folderPath" : "/",
+  "icon" : "event_note",
+  "defaultType" : true,
+  "baseType" : "CONTENT",
+  "fields" : [ {
+    "clazz" : "TextField",
+    "searchable" : true,
+    "indexed" : true,
+    "listed" : true,
+    "id" : "9f5a97dc-703c-4721-9cce-29478671558b",
+    "modDate" : "2024-08-15T01:38:47.000+00:00",
+    "name" : "Title",
+    "variable" : "title",
+    "required" : true,
+    "sortOrder" : 1,
+    "regexCheck" : "[^(<[.\\n]+>)]*",
+    "fieldType" : "Text",
+    "fieldTypeLabel" : "Text",
+    "iDate" : "2010-02-23T22:05:55.000+00:00",
+    "dataType" : "TEXT"
+  }, {
+    "clazz" : "HostFolderField",
+    "indexed" : true,
+    "id" : "49c5bd96-d70c-441c-9c5f-7ccaa8e7ff9a",
+    "modDate" : "2024-08-15T01:38:47.000+00:00",
+    "name" : "Site",
+    "variable" : "contentHost",
+    "required" : true,
+    "sortOrder" : 2,
+    "fieldType" : "Host-Folder",
+    "fieldTypeLabel" : "Site or Folder",
+    "iDate" : "2010-02-25T12:57:09.000+00:00",
+    "dataType" : "SYSTEM"
+  }, {
+    "clazz" : "WysiwygField",
+    "id" : "5c6e0bff-cfeb-44c6-86e2-a0ba40e7b66c",
+    "modDate" : "2024-08-15T01:38:47.000+00:00",
+    "name" : "Body",
+    "variable" : "body",
+    "required" : true,
+    "sortOrder" : 3,
+    "fieldType" : "WYSIWYG",
+    "fieldTypeLabel" : "WYSIWYG",
+    "iDate" : "2010-02-23T22:06:24.000+00:00",
+    "dataType" : "LONG_TEXT"
+  } ],
+  "workflows" : [ {
+    "id" : "d61a59e1-a49c-46f2-a929-db2b4bfa88b2",
+    "variableName" : "SystemWorkflow"
+  } ],
+  "dotCMSObjectType" : "ContentType"
+}

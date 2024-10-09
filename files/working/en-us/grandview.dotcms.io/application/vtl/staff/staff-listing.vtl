@@ -1,0 +1,16 @@
+
+<div class="flex flex-wrap mxn1 items-stretch">
+#foreach($con in $dotcontent.pull("+contentType:Staff +(conhost:8a7d5e23-da1e-420a-b4f0-471e7da8ea2d conhost:SYSTEM_HOST)",0,"Staff.firstName"))
+    <div class="col-6 sm-col-4 md-col-3 lg-col-2 flex">
+        <div class="m1 shadow-box bg-white items-stretch">
+            <a href="/staff/${con.firstName}/${con.lastName}" aria-label="Bob Klontz" class="text-decoration-none ">
+                <img src="/contentAsset/image/$con.identifier/image/crop_w/396/crop_h/394" alt="Bob" class="responsive">
+                <div class="bg-white p2">
+                    <p class="h4 serif blue mt0 mb0">${con.firstName} ${con.lastName}</p>
+                    <p class="small">$!{con.jobTitle}</p>
+                </div>
+            </a>
+        </div>
+    </div>
+#end
+</div>

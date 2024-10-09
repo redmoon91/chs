@@ -1,0 +1,77 @@
+#set($myHost = $dotcontent.find("$!{host.identifier}"))
+#foreach($relatedSite in $myHost.sites)
+	#set($site = $dotcontent.find("$relatedSite.identifier"))
+#end
+<div id="siteLocations">
+	<h1>$!{site.title}</h1>
+	<ul class="loc-menu">
+			<li data-index="1" class="on" tabindex="0" role="button"><em class="fa fa-angle-right" aria-hidden="true"></em><span>$!{site.title}</span></li>
+	<li data-content="" data-description="0" data-default-g-url="https://www.google.com/maps/place//" tabindex="0" role="button" class="hide">
+		<ul class="custom" style="display:none;">
+	
+	</ul>
+		<div class="img-wrap">
+			
+			<img src="/dA/$!{site.image.identifier}" alt="$!{site.title} image">
+		</div>
+		<h2>$!{site.title}</h2>
+		<p>$!{site.description}</p>
+		<p class="address" style="display: none;">
+			
+		</p>
+		
+		## Find out from group how Medical Groups or Hospitals should be pulled healthcare
+
+		<ul class="links">
+			
+			
+		<li tabindex="0" role="button"><a href="/hospitals">Directions</a></li>
+		<li tabindex="0" role="button"><a href="/contact">Contact</a></li>
+		<li class="last" tabindex="0" role="button"><a href="/online-scheduling?utm_campaign=chs-ols&amp;utm_source=grandview&amp;utm_medium=location-listing-link">Online Scheduling</a></li></ul>
+	</li>
+	<li data-index="2" tabindex="0" role="button"><em class="fa fa-angle-right" aria-hidden="true"></em><span>$!{site.groupName}</span></li>
+	<li data-content="" data-description="0" data-default-g-url="https://www.google.com/maps/place//" class="last hide" tabindex="0" role="button">
+		<ul class="custom" style="display:none;"></ul>
+		<div class="img-wrap">
+			
+			<img src="/dA/62d084eab653bdd369d2ce8a2fd26115/physician-group-locations.jpg" alt="Grandview Medical Group">
+		</div>
+		<h2>$!{site.title}</h2>
+		$!{site.description}
+		<p class="address" style="display: none;">
+			
+			
+			
+		</p>
+		
+		<ul class="links">
+			
+			
+		<li class="last" tabindex="0" role="button"><a href="grandview-medical-group.aspx">More Information</a></li></ul>
+	</li>
+	</ul>
+	<div id="contentPane" style="height: 350px;">
+		<div class="inner">
+		<ul class="custom" style="display:none;">
+	
+	</ul>
+		<div class="img-wrap">
+			
+			<img src="/dA/0c05cae5bebb06f95909668186344543/grandview-campus-new.jpg" alt="Grandview Medical Center">
+		</div>
+		<h2>$!{site.groupName}</h2>
+		<p>At $!{site.groupName}, we believe in the power of people to create great care. The dedicated patient care team consists of staff, volunteers and physicians representing all major specialties. We work hard every day to be a place of healing, caring and connection for patients and families in the community we call home.</p>
+		<p class="address" style="display: none;">
+			
+			
+			
+		</p>
+		
+		<ul class="links">
+			
+			
+		<li><a href="hospitals.aspx">Directions</a></li><li><a href="contact.aspx">Contact</a></li><li class="last"><a href="online-scheduling.aspx?utm_campaign=chs-ols&amp;utm_source=grandview&amp;utm_medium=location-listing-link">Online Scheduling</a></li></ul>
+	</div>
+	</div>
+	##<script type="text/javascript" src="/custom/javascript/locations/homepage_locations_manager_v2.js?v=051724"></script>
+	</div>

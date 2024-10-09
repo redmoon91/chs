@@ -1,0 +1,116 @@
+<div id="cphBody_divLeft" class="cpsty_Left">
+  <div id="cphBody_divLeftNav">
+    <div id="cphBody_cnNavigation">
+      <div id="cphBody_hospital-about-us" class="cpsty_Navigation" onmouseover="this.className='cpsty_Navigation cpsty_NavigationHover';" onmouseout="this.className='cpsty_Navigation';" style="border-top:none;">
+        <div id="cphBody_hospital-about-us_Content" class="cpsty_NavigationContent" style="padding-left:0px;"><a href="/hospital-about-us" target="_self" class="cpsty_NavigationText">About Us</a>
+        </div>
+      </div>
+      <div id="cphBody_enewsletter-redirect" class="cpsty_Navigation" onmouseover="this.className='cpsty_Navigation cpsty_NavigationHover';" onmouseout="this.className='cpsty_Navigation';">
+        <div id="cphBody_enewsletter-redirect_Content" class="cpsty_NavigationContent" style="padding-left:0px;"><a href="/enewsletter-redirect" target="_self" class="cpsty_NavigationText">eNewsletter Redirect</a>
+        </div>
+      </div>
+      <div id="cphBody_Classes-Events" class="cpsty_Navigation" onmouseover="this.className='cpsty_Navigation cpsty_NavigationHover';" onmouseout="this.className='cpsty_Navigation';">
+        <div id="cphBody_Classes-Events_Content" class="cpsty_NavigationContent" style="padding-left:0px;"><a href="/classes-events" target="_self" class="cpsty_NavigationText">Events</a>
+        </div>
+      </div>
+      <div id="cphBody_Classes-Events-Programs" class="cpsty_Navigation" onmouseover="this.className='cpsty_Navigation cpsty_NavigationHover';" onmouseout="this.className='cpsty_Navigation';">
+        <div id="cphBody_Classes-Events-Programs_Content" class="cpsty_NavigationContent" style="padding-left:0px;"><a href="/classes-events-programs" target="_self" class="cpsty_NavigationText">Events</a>
+        </div>
+      </div>
+      <div id="cphBody_find-a-doctor" class="cpsty_Navigation" onmouseover="this.className='cpsty_Navigation cpsty_NavigationHover';" onmouseout="this.className='cpsty_Navigation';">
+        <div id="cphBody_find-a-doctor_Content" class="cpsty_NavigationContent" style="padding-left:0px;"><a href="/find-a-doctor" target="_self" class="cpsty_NavigationText">Find a Doctor</a>
+        </div>
+      </div>
+      <div id="cphBody_locations" class="cpsty_Navigation cpsty_NavigationSelected" onmouseover="this.className='cpsty_Navigation cpsty_NavigationSelected cpsty_NavigationHover';" onmouseout="this.className='cpsty_Navigation cpsty_NavigationSelected';">
+        <div id="cphBody_locations_Content" class="cpsty_NavigationContent" style="padding-left:0px;"><a href="/locations" target="_self" class="cpsty_NavigationText">Locations</a>
+        </div>
+      </div>
+
+      ##begin Pull of related hospitals by Category
+      #set($myCategorykey = "hospitalType")
+      #foreach($cat in $categories.getChildrenCategoriesByKey("$!{myCategorykey}"))
+        <div id="cphBody_$!{cat.key}" class="cpsty_Navigation cpsty_SubNavigation cpsty_SubNavigation1" onmouseover="this.className='cpsty_Navigation cpsty_SubNavigation cpsty_SubNavigation1 cpsty_NavigationHover cpsty_SubNavigationHover cpsty_SubNavigation1Hover';" onmouseout="this.className='cpsty_Navigation cpsty_SubNavigation cpsty_SubNavigation1';">
+          <div id="cphBody_$!{cat.key}" class="cpsty_NavigationContent" style="padding-left:0px;"><a href="/locations/?locationType=$!{cat.categoryVelocityVarName}" target="_self" class="cpsty_NavigationText cpsty_SubNavigationText cpsty_SubNavigation1Text align">$!{cat.categoryName}</a>
+          </div>
+        </div>
+      #end
+      ##end Pull of Categories
+    </div>
+  </div>
+    
+  <div id="cphBody_divLeftAc2">
+    <div id="cpsys_Advertisers_5fde8822-339f-4411-a16a-af81d7ca7b81" style="text-align:left;">
+      <ul id="infoTabs" class="tabs first">
+        <li style="width:50%"><a href="#" id="infoTab" rel="tab1" class="selected"><img src="https://www.grandviewhealth.com/Uploads/public/images/design/info_icon.png" alt="information" aria-label="image"></a></li>
+        <!--<li><a href="#" id="eventsTab" rel="tab2"><img src="https://www.grandviewhealth.com/Uploads/public/images/design/calendar_icon.png" alt="events" ></a></li>-->
+        <li style="width:50%" class="last"><a href="#" id="newsTab" rel="tab3" style="border-right:0;" class=""><img src="https://www.grandviewhealth.com/Uploads/public/images/design/news_icon.png" alt="news" aria-label="image"></a></li>
+      </ul>
+      <div class="tab-content">
+        <div id="tab1" style="display: block;">
+          <span>
+            <ul class="info">
+              <li class="last"><img src="https://www.grandviewhealth.com/Uploads/public/images/design/directions-icon-2.png" alt="">
+              <h3>Directions</h3>
+              <a href="locations.aspx">Find Our Location</a>
+              </li>
+              <!--  <li><img src="https://www.grandviewhealth.com/Uploads/public/images/design/envelope_icon.png" alt="">
+              <h3>E-Newsletter</h3>
+              <a href="enewsletter-sign-up.aspx">Sign Up</a>
+              </li> -->
+            </ul>
+          </span>
+        </div>
+        <!--<div id="tab2"><ul class="rel-items">
+        <li><a href="/Grandview/class-events/228cae34-c213-427b-b0f1-fdafb85bfcc7">Stroke Support Group</a>
+        <p>08.19.2024</p>
+        <em class="time">2:00 PM - 3:00 PM (CST)</em>
+        </li><li><a href="/Grandview/class-events/fdc0ff0d-5ca9-48a8-867f-8f1feec30eee">Stroke Support Group</a>
+          <p>09.16.2024</p>
+          <em class="time">2:00 PM - 3:00 PM (CST)</em>
+        </li>
+          <li class="view-all"><a href="/grandview/classes-events.aspx">See all Upcoming Events</a></li>
+        </ul></div>-->
+        <div id="tab3" style="display: none;">
+          <ul class="rel-items">
+            <li><a href="/news-room/grandview-medical-center-nationally-recognized-for-20516">Grandview Medical Center Nationally Recognized for Its Commitment to Providing High-quality Stroke Care</a>
+            <p class="last">07.15.2024</p>
+            </li><li><a href="/news-room/give-hope-this-spring-give-blood-20312">Give Hope This Spring – Give Blood</a>
+              <p class="last">05.02.2024</p>
+            </li>
+            <li class="view-all last"><a href="/grandview/news-room.aspx">See All News &amp; Press Releases</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <script type="text/javascript">
+      var navigation=new ddtabcontent("infoTabs")
+      navigation.setpersist(false)
+      navigation.setselectedClassTarget("link") //"link" or "linkparent"
+      navigation.init()
+      </script>
+    </div>
+    <div id="cpsys_Advertisers_5ada016d-f1ee-4ce8-a1c4-af435c0f3858" style="text-align:left;">
+      <ul class="promo">
+        <li>
+          <div class="img-wrap"><img src="https://www.grandviewhealth.com/Uploads/public/images/promos/e-newsletter-sign-up-rail.jpg" alt="Sign Up For Our E-Newsletter"></div>
+          <h2>Sign Up For Our E-Newsletter</h2>
+          <p>Featuring a monthly dose of information and inspiration for living well.</p>
+          <a href="enewsletter-sign-up.aspx?utm_campaign=enewsletter-sign-up&amp;utm_source=hospital-website-global&amp;utm_medium=promo" target="_self">Learn More</a>
+        </li>
+        <li>
+          <div class="img-wrap"><img src="https://www.grandviewhealth.com/Uploads/public/images/promos/online-scheduling-rail.jpg" alt="Mobile Device"></div>
+          <h2>Online Scheduling</h2>
+          <p>Free, convenient online check-in services.</p>
+          <a href="online-scheduling.aspx?utm_campaign=chs-ols&amp;utm_source=global&amp;utm_medium=promo" target="_self">Learn More</a>
+        </li>
+        <li class="last">
+          <div class="img-wrap"><img src="https://www.grandviewhealth.com/Uploads/public/images/promos/grandview_promo_health_insurance_marketplace.jpg" alt="Nurse and Patient"></div>
+          <h2>Patient Portal</h2>
+          
+          <p>Access your medical information <br>on demand.</p>
+          <a href="hospital-patient-portal.aspx" target="_self">Learn More</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

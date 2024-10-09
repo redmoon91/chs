@@ -1,0 +1,22 @@
+<div class="flex flex-wrap">
+#foreach($con in $dotcontent.pull("+contentType:Staff +(conhost:8a7d5e23-da1e-420a-b4f0-471e7da8ea2d conhost:SYSTEM_HOST) +(Staff.featured:*yes*)",4,"score,modDate desc"))
+    <div class="col-12 sm-col-6 md-col-4 lg-col-3">
+        <div class="bg-white md-taller m1 shadow-box">
+            <a href="/staff/${con.firstName}/${con.lastName}" title="${con.firstName} ${con.lastName}" class="text-decoration-none">
+                <div class="">
+                    <img class="responsive" src="/contentAsset/image/$con.identifier/image/crop_w/396/crop_h/394" alt="Derek Cowert">
+                </div>
+                <div class="px3 pb2 pt1">
+                    <h4 class="serif h4 mb0 mt1">${con.firstName} ${con.lastName}</h4>
+                    <p class="italic serif mt1 mb0">$!{con.jobTitle}</p>
+                    #foreach($office in $con.location )
+                         <p class="small mt1">$office.city, $office.state</p>
+                    #end
+                </div>
+            </a>
+        </div>
+    </div>
+#end
+</div>
+
+<p class="center p3"><a href="/about-us/#Meet-Our-Team" class="link">View all staff</a></p>

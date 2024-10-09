@@ -1,0 +1,108 @@
+#*
+Set from top of template.vtl
+$!{myHost} = Current host
+$!{site} = Site Content related to host containing site configuration, logo, etc.
+$!{mainHospital} = Main Hospital on the site that has hospital info and location related to child hospitals
+*#
+
+<div class="page-content">
+	#if($request.getParameter("locationType"))
+		#set($activeCategory = $request.getParameter("locationType"))
+		
+		#foreach($childHospital in $dotcontent.pull("+contentType:Hospitals +(conhost:$!{host.identifier} conhost:SYSTEM_HOST) +(categories:$!{activeCategory})",0,"Hospitals.title"))
+			#if($velocityCount == 1)
+				<img src="$!{childHospital.googleMapsLargeMapSrc}" alt="Google Map">
+			#end
+				<ul id="siteLocations" class="results">
+					<li data-default-g-url="$!{childHospital.googleMapsLink}" class="last"><em class="alpha">$!{velocityCount}</em>
+					
+					<div class="img-wrap">
+						<a href="$!{childHospital.googleMapsLink}" class="g-url" target="_blank"><img src="$!{childHospital.googleMapSrc}" alt="Google Map" aria-label="image"></a>
+					</div>
+					<h2>$!{childHospital.title}</h2>
+					<p class="address">
+						$!{childHospital.streetAddress1} #if($!{childHospital.streetAddress2})| $!{childHospital.streetAddress2}#end
+						<br>$!{childHospital.city}, $!{childHospital.state.selectValue} $!{childHospital.zipCode}
+						<br><strong>$!{childHospital.phone}</strong>
+					</p>
+					
+					<ul class="links">
+						
+						<li class="last"><a href="$!{childHospital.googleMapsLink}" target="_blank" class="g-url">Directions</a></li>
+					</ul>
+				</li>
+				</ul>
+				<script type="text/javascript" src="https://www.grandviewhealth.com/custom/javascript/locations/location_results_manager_v2.js?v=051724"></script>
+
+		#end
+	#else
+		<img src="https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyA9IyzhdUZ5GQ695j4Cm8qKxCXfzUOWNwk&amp;size=600x300&amp;scale=2&amp;format=png&amp;markers=size:mid%7Clabel:A%7C33.6368316%2c-86.6186374&amp;markers=size:mid%7Clabel:B%7C33.4331483%2c-86.7169497&amp;markers=size:mid%7Clabel:C%7C33.4332054%2c-86.719136&amp;signature=A2LBHkIw_T9s0s05TAxP8ifZe5s=" alt="Google Map">
+		<ul id="siteLocations" class="results">
+			<li data-default-g-url="https://www.google.com/maps/place/5890+Valley+Road+Suite+100+Trussville+AL+35235/33.6368316,-86.6186374" data-g-url="https://goo.gl/maps/duhMnSahykJVUGiw7"><em class="alpha">A</em>
+		
+				<div class="img-wrap">
+					<a href="https://goo.gl/maps/duhMnSahykJVUGiw7" class="g-url" target="_blank"><img src="https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyA9IyzhdUZ5GQ695j4Cm8qKxCXfzUOWNwk&amp;size=300x200&amp;format=png&amp;center=33.6368316%2c-86.6186374&amp;zoom=15&amp;signature=W9TMfyzpU64-HOK9X1_VPztW798=" alt="Google Map" aria-label="image"></a>
+				</div>
+				<h2>Grandview Imaging at Trussville</h2>
+				<p class="address">
+					5890 Valley Road | Suite 100
+					<br>Trussville, AL 35235
+					<br><strong>(205) 971-1489</strong>
+				</p>
+		
+				<ul class="links">
+					<li class="last"><a href="https://goo.gl/maps/duhMnSahykJVUGiw7" target="_blank" class="g-url">Directions</a></li>
+				</ul>
+			</li>
+			<li data-default-g-url="https://www.google.com/maps/place/3690+Grandview+Parkway+Imaging+Services,+2nd+floor+Birmingham+AL+35243/33.4331483,-86.7169497" data-g-url="https://goo.gl/maps/sR494PmrFz7aym769"><em class="alpha">B</em>
+				<div class="img-wrap">
+					<a href="https://goo.gl/maps/sR494PmrFz7aym769" class="g-url" target="_blank"><img src="https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyA9IyzhdUZ5GQ695j4Cm8qKxCXfzUOWNwk&amp;size=300x200&amp;format=png&amp;center=33.4331483%2c-86.7169497&amp;zoom=15&amp;signature=EiAyp6zvMmV2yJNkv8CRaLk5zVE=" alt="Google Map" aria-label="image"></a>
+				</div>
+				<h2>Grandview Medical Center - Main Campus</h2>
+				<p class="address">
+					3690 Grandview Parkway | Imaging Services, 2nd floor
+					<br>Birmingham, AL 35243
+					<br><strong>(205) 971-1489</strong>
+				</p>
+				
+				<ul class="links">
+					<li class="last"><a href="https://goo.gl/maps/sR494PmrFz7aym769" target="_blank" class="g-url">Directions</a></li>
+				</ul>
+			</li>
+			<li data-default-g-url="https://www.google.com/maps/place/3686+Grandview+Parkway+Physician+Plaza,+Suite+200+Birmingham+AL+35243/33.4332054,-86.719136" data-g-url="https://goo.gl/maps/iArCVn8d8e34s4pv9"><em class="alpha">C</em>
+				<div class="img-wrap">
+					<a href="https://goo.gl/maps/iArCVn8d8e34s4pv9" class="g-url" target="_blank"><img src="https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyA9IyzhdUZ5GQ695j4Cm8qKxCXfzUOWNwk&amp;size=300x200&amp;format=png&amp;center=33.4332054%2c-86.719136&amp;zoom=15&amp;signature=PTPyhezfHmUHYCnceSt0gi82Abs=" alt="Google Map" aria-label="image"></a>
+				</div>
+				<h2>The Diagnostic Center at Grandview</h2>
+				<p class="address">
+					3686 Grandview Parkway | Physician Plaza, Suite 200
+					<br>Birmingham, AL 35243
+					<br><strong>(205) 971-1489</strong>
+				</p>
+				<ul class="links">
+					<li class="last"><a href="https://goo.gl/maps/iArCVn8d8e34s4pv9" target="_blank" class="g-url">Directions</a></li>
+				</ul>
+			</li>
+			<li data-default-g-url="https://www.google.com/maps/place/3686+Grandview+Parkway+Physician+Plaza,+Suite+210+Birmingham+AL+35243/33.4332054,-86.719136" data-g-url="https://goo.gl/maps/AoyoPgyJX86hG7yU8" class="last"><em class="alpha">D</em>
+				<div class="img-wrap">
+					<a href="https://goo.gl/maps/AoyoPgyJX86hG7yU8" class="g-url" target="_blank"><img src="https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyA9IyzhdUZ5GQ695j4Cm8qKxCXfzUOWNwk&amp;size=300x200&amp;format=png&amp;center=33.4332054%2c-86.719136&amp;zoom=15&amp;signature=PTPyhezfHmUHYCnceSt0gi82Abs=" alt="Google Map" aria-label="image"></a>
+				</div>
+				<h2>Women's Imaging at Grandview</h2>
+				<p class="address">
+					3686 Grandview Parkway | Physician Plaza, Suite 210
+					<br>Birmingham, AL 35243
+					<br><strong>(205) 971-1489</strong>
+				</p>
+				<ul class="links">
+					
+					<li class="last"><a href="https://goo.gl/maps/AoyoPgyJX86hG7yU8" target="_blank" class="g-url">Directions</a></li>
+				</ul>
+			</li>
+		</ul>
+		
+	#end
+
+
+	
+	<script type="text/javascript" src="https://www.grandviewhealth.com/custom/javascript/locations/location_results_manager_v2.js?v=051724"></script>
+</div>

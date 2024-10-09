@@ -1,0 +1,163 @@
+{
+  "clazz" : "SimpleContentType",
+  "id" : "1ec01b150dcee851f5c1c14672abb7fe",
+  "name" : "Services",
+  "variable" : "Services",
+  "modDate" : "2024-08-16T14:03:26.000+00:00",
+  "iDate" : "2024-08-16T13:39:24.000+00:00",
+  "host" : "8a7d5e23-da1e-420a-b4f0-471e7da8ea2d",
+  "folder" : "SYSTEM_FOLDER",
+  "siteName" : "grandview.dotcms.io",
+  "folderPath" : "/",
+  "icon" : "event_note",
+  "baseType" : "CONTENT",
+  "fields" : [ {
+    "clazz" : "RowField",
+    "id" : "7eb1713597be74da9971edba60635972",
+    "modDate" : "2024-08-16T13:40:03.000+00:00",
+    "name" : "fields-0",
+    "fieldType" : "Row",
+    "fieldTypeLabel" : "Row",
+    "iDate" : "2024-08-16T13:40:03.000+00:00",
+    "variable" : "fields01",
+    "dataType" : "SYSTEM"
+  }, {
+    "clazz" : "ColumnField",
+    "id" : "6faac716c7021142bcb103904736691b",
+    "modDate" : "2024-08-16T13:40:03.000+00:00",
+    "name" : "fields-1",
+    "sortOrder" : 1,
+    "fieldType" : "Column",
+    "fieldTypeLabel" : "Column",
+    "iDate" : "2024-08-16T13:40:03.000+00:00",
+    "variable" : "fields11",
+    "dataType" : "SYSTEM"
+  }, {
+    "clazz" : "HostFolderField",
+    "indexed" : true,
+    "id" : "ccd5f55d7f3c38af315a1dcf00e918b1",
+    "modDate" : "2024-08-16T13:49:44.000+00:00",
+    "name" : "Site",
+    "variable" : "site",
+    "sortOrder" : 2,
+    "fieldType" : "Host-Folder",
+    "fieldTypeLabel" : "Site or Folder",
+    "iDate" : "2024-08-16T13:49:44.000+00:00",
+    "dataType" : "SYSTEM"
+  }, {
+    "clazz" : "TextField",
+    "searchable" : true,
+    "indexed" : true,
+    "listed" : true,
+    "id" : "425dd03a17f98d4103c3856930202d5d",
+    "modDate" : "2024-08-16T13:49:44.000+00:00",
+    "name" : "Title",
+    "variable" : "title",
+    "required" : true,
+    "sortOrder" : 3,
+    "fieldType" : "Text",
+    "fieldTypeLabel" : "Text",
+    "iDate" : "2024-08-16T13:39:40.000+00:00",
+    "dataType" : "TEXT"
+  }, {
+    "clazz" : "CustomField",
+    "searchable" : true,
+    "unique" : true,
+    "indexed" : true,
+    "listed" : true,
+    "id" : "48de410bf6b0d0599609a56ec2aa25ab",
+    "modDate" : "2024-08-16T13:49:44.000+00:00",
+    "name" : "URL Title",
+    "variable" : "urlTitle",
+    "required" : true,
+    "sortOrder" : 4,
+    "values" : "#dotParse(\"/application/vtl/custom-fields/url-title.vtl\")",
+    "fieldType" : "Custom-Field",
+    "fieldTypeLabel" : "Custom Field",
+    "iDate" : "2024-08-16T13:41:52.000+00:00",
+    "dataType" : "LONG_TEXT"
+  }, {
+    "clazz" : "ColumnField",
+    "id" : "c08e9df850f882f398dee22fddb97392",
+    "modDate" : "2024-08-16T13:49:44.000+00:00",
+    "name" : "fields-2",
+    "sortOrder" : 5,
+    "fieldType" : "Column",
+    "fieldTypeLabel" : "Column",
+    "iDate" : "2024-08-16T13:40:03.000+00:00",
+    "variable" : "fields2",
+    "dataType" : "SYSTEM"
+  }, {
+    "clazz" : "BinaryField",
+    "id" : "54a7008efb6bd83c4e770167f610f9f2",
+    "modDate" : "2024-08-16T13:49:44.000+00:00",
+    "name" : "Image",
+    "variable" : "image",
+    "sortOrder" : 6,
+    "fieldType" : "Binary",
+    "fieldTypeLabel" : "Binary",
+    "iDate" : "2024-08-16T13:40:14.000+00:00",
+    "dataType" : "SYSTEM"
+  }, {
+    "clazz" : "RowField",
+    "id" : "64492ccc6d24e8fdc1fde43b4d535e03",
+    "modDate" : "2024-08-16T13:49:44.000+00:00",
+    "name" : "fields-3",
+    "sortOrder" : 7,
+    "fieldType" : "Row",
+    "fieldTypeLabel" : "Row",
+    "iDate" : "2024-08-16T13:39:24.000+00:00",
+    "variable" : "fields0",
+    "dataType" : "SYSTEM"
+  }, {
+    "clazz" : "ColumnField",
+    "id" : "e9584cc2eca005338786a8cb770b56a7",
+    "modDate" : "2024-08-16T13:49:44.000+00:00",
+    "name" : "fields-4",
+    "sortOrder" : 8,
+    "fieldType" : "Column",
+    "fieldTypeLabel" : "Column",
+    "iDate" : "2024-08-16T13:39:24.000+00:00",
+    "variable" : "fields1",
+    "dataType" : "SYSTEM"
+  }, {
+    "clazz" : "WysiwygField",
+    "id" : "cadb4c7b4587d312c26dc0ed530de01c",
+    "modDate" : "2024-08-16T13:49:44.000+00:00",
+    "name" : "Description",
+    "variable" : "description",
+    "sortOrder" : 9,
+    "fieldType" : "WYSIWYG",
+    "fieldTypeLabel" : "WYSIWYG",
+    "iDate" : "2024-08-16T13:42:08.000+00:00",
+    "dataType" : "LONG_TEXT"
+  }, {
+    "clazz" : "RelationshipField",
+    "searchable" : true,
+    "indexed" : true,
+    "id" : "e88e20fbb87af76166d795811908a7f4",
+    "modDate" : "2024-08-16T13:49:44.000+00:00",
+    "name" : "Child Services",
+    "variable" : "childServices",
+    "sortOrder" : 10,
+    "fieldType" : "Relationship",
+    "fieldTypeLabel" : "Relationships Field",
+    "iDate" : "2024-08-16T13:43:15.000+00:00",
+    "dataType" : "SYSTEM",
+    "relationships" : {
+      "velocityVar" : "Services",
+      "cardinality" : "MANY_TO_MANY",
+      "isParentField" : true
+    }
+  } ],
+  "detailPage" : "//grandview.dotcms.io/services/services-detail",
+  "urlMapPattern" : "/{urlTitle}",
+  "metadata" : {
+    "CONTENT_EDITOR2_ENABLED" : false
+  },
+  "workflows" : [ {
+    "id" : "d61a59e1-a49c-46f2-a929-db2b4bfa88b2",
+    "variableName" : "SystemWorkflow"
+  } ],
+  "dotCMSObjectType" : "ContentType"
+}

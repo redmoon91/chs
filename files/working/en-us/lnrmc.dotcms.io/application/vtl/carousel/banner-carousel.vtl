@@ -1,0 +1,49 @@
+#set($bannerContent = $dotcontent.find("$!{ContentIdentifier}"))
+
+<div id="bannerCarousel" class="carousel slide carousel-banner" data-ride="carousel">
+    <div class="carousel-inner">
+    #foreach($content in $bannerContent.banners)
+        <div class="carousel-item cs-item-$velocityCount #if($velocityCount == 1)active#end">
+            <div class="banner bg-image-full bg-overlay-30 context-dark" style="background-image: url('/dA/$content.identifier/image/450h/50q/$content.image.name'); background-size: cover; background-repeat: no-repeat;">
+                <div class="container">
+                    <div class="row justify-content-lg-center">
+                        #if($velocityCount == 3)
+                            <div class="col-lg-6"></div>
+                        #end
+                        <div class="col-lg-6 #if($velocityCount == 3) text-right #end">
+                            <div class="banner-main-content">
+                                <h2 class="banner-title">$!{content.title}</h2>
+                                <p class="text-decoration-lines-2">
+                                    <span>
+                                        $!{content.caption}
+                                        <span class="text-decoration-line text-decoration-line-left"></span>
+                                        <span class="text-decoration-line text-decoration-line-right"></span>
+                                    </span>
+                                </p>
+                                
+                                #if($UtilMethods.isSet($!{content.link}) && $UtilMethods.isSet($!{content.buttonText}))
+                                <div class="group-lg">
+                                    <a href="$!{content.link}" target="blank" class="btn mt-3">$!{content.buttonText}</a>
+                                    ##<a class="button button-primary button-leaf mt-3" href="$!{content.link}">$!{content.buttonText}</a>
+                                </div>
+                                #end
+                            </div>
+                        </div>
+                        #if($velocityCount != 3)
+                            <div class="col-lg-6"></div>
+                        #end
+                    </div>
+                </div>
+            </div>
+        </div>
+    #end
+    </div>
+    <a class="carousel-control-prev" href="#bannerCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#bannerCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>

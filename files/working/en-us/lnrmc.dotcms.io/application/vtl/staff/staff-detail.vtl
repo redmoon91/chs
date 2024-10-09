@@ -1,0 +1,81 @@
+#if($UtilMethods.isSet($URLMapContent))
+    <div class="md-flex ">
+        <div class="bg-white md-col md-col-6">
+            <div class="p4">
+                <div class="max-width-1 mx-auto">
+                    <p class="section-title orange">Get to know <i class="line-mark inline-block align-middle ml2" aria-hidden="true"></i></p>
+                    <h1 class="h2 mb0">$URLMapContent.firstName $URLMapContent.lastName</h1>
+                    <p class="italic serif mt1">$URLMapContent.jobTitle</p>
+                    <p class="small blue bold">Phone: $URLMapContent.phone  //  <a href="mailto:$URLMapContent.email" class="bold gray">Email Me</a></p>
+                    <p class="small">
+                        <span class="serif">Office address</span><br>
+                        #foreach($office in $URLMapContent.location )
+                            $office.address<br>
+                            $office.city, $office.state $office.zipCode
+                        #end
+                    </p>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <div class="bg-image md-col md-col-6" style="background-image: url(/dA/$URLMapContent.identifier/hero/1122w/50q/$URLMapContent.hero.name); background-position: top right;" aria-label="Derek Cowart"></div>
+    </div>
+    
+    <div class="p4 bg-gradient-gray">
+        <div class="max-width-4 mx-auto bg-blue p3">
+            <p class="white h3 serif center">$URLMapContent.pullQuote</p>
+        </div>
+        <div class="max-width-4 mx-auto mt4">
+            <div class="max-width-3 mx-auto">
+                <h2 class="h3">About</h2>
+                $URLMapContent.bio
+            </div>
+
+            #if($UtilMethods.isSet($URLMapContent.photo3.name))
+                <div class="sm-flex mt3 mb3">
+                    <div class="col-12 sm-col-4">
+                        <img src="/dA/$URLMapContent.identifier/photo1/50q/$URLMapContent.photo1.name" alt="$URLMapContent.photo1.name" class="responsive">
+                    </div>
+                    <div class="col-12 sm-col-4">
+                        <img src="/dA/$URLMapContent.identifier/photo2/50q/$URLMapContent.photo2.name" alt="$URLMapContent.photo2.name" class="responsive">
+                    </div>
+                    <div class="col-12 sm-col-4">
+                        <img src="/dA/$URLMapContent.identifier/photo3/50q/$URLMapContent.photo3.name" alt="$URLMapContent.photo3.name" class="responsive">
+                    </div>
+                </div>
+            #else
+                <div class="sm-flex mt3 mb3">
+                    <div class="col-12 sm-col-6">
+                        <img src="/dA/$URLMapContent.identifier/photo1/50q/$URLMapContent.photo1.name" alt="$URLMapContent.photo1.name" class="responsive">
+                    </div>
+                    <div class="col-12 sm-col-6">
+                        <img src="/dA/$URLMapContent.identifier/photo2/50q/$URLMapContent.photo2.name" alt="$URLMapContent.photo2.name" class="responsive">
+                    </div>
+                </div>
+            #end
+
+            <div class="max-width-3 mx-auto">
+                <div class="bg-white md-flex mt4 mb4 p2">
+                    <div class="xs-hide sm-hide">
+                        <img src="/contentAsset/image/$URLMapContent.identifier/image/crop_w/396/crop_h/394" alt="$URLMapContent.firstName $URLMapContent.lastName" class="responsive">
+                    </div>
+                    <div class="p3">
+                        <h2 class="h4 blue mb0 bold">Contact Derek</h2>
+                        <p class="italic serif">Producer, Commercial Risk Management</p>
+                        <p class="small blue bold">Phone: (253) 929-4671  //  <a href="mailto:derek-cowart@leavitt.com" class="bold gray">Email Me</a></p>
+                        <p class="small">
+                            <span class="serif">Office address</span><br>
+                            #foreach($office in $URLMapContent.location )
+                                $office.address<br>
+                                $office.city, $office.state $office.zipCode
+                            #end
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+#else
+    <h1>Sorry the we couldn't find the staff memeber you requested.</h1>
+    <p><a href="/staff/">Retirn to staff list</a></p>
+#end

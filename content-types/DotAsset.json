@@ -1,0 +1,62 @@
+{
+  "clazz" : "DotAssetContentType",
+  "id" : "f2d8a1c7-2b77-2081-bcf1-b5348988c08d",
+  "name" : "dotAsset",
+  "variable" : "DotAsset",
+  "modDate" : "2024-08-15T01:35:45.000+00:00",
+  "iDate" : "2020-04-20T19:32:22.986+00:00",
+  "host" : "SYSTEM_HOST",
+  "folder" : "SYSTEM_FOLDER",
+  "siteName" : "systemHost",
+  "folderPath" : "/",
+  "icon" : "assessment",
+  "description" : "Default Content Type for DotAsset",
+  "baseType" : "DOTASSET",
+  "fields" : [ {
+    "clazz" : "HostFolderField",
+    "searchable" : true,
+    "indexed" : true,
+    "id" : "d8719d24-df37-3a20-9442-75fb423cef7e",
+    "modDate" : "2024-08-15T01:35:45.000+00:00",
+    "name" : "Site or Folder",
+    "variable" : "hostFolder",
+    "fieldType" : "Host-Folder",
+    "fieldTypeLabel" : "Site or Folder",
+    "iDate" : "2020-04-20T19:32:23.000+00:00",
+    "dataType" : "SYSTEM"
+  }, {
+    "clazz" : "BinaryField",
+    "searchable" : true,
+    "indexed" : true,
+    "listed" : true,
+    "id" : "06d5ecb5-5334-3cb7-a883-f029d12e6a0b",
+    "modDate" : "2024-08-15T01:35:45.000+00:00",
+    "name" : "Asset",
+    "variable" : "asset",
+    "required" : true,
+    "sortOrder" : 1,
+    "fixed" : true,
+    "fieldType" : "Binary",
+    "fieldTypeLabel" : "Binary",
+    "iDate" : "2020-04-20T19:32:23.000+00:00",
+    "dataType" : "SYSTEM"
+  }, {
+    "clazz" : "TagField",
+    "searchable" : true,
+    "indexed" : true,
+    "id" : "d8720d13-df48-4b29-9331-75fa314def7e",
+    "modDate" : "2024-08-15T01:35:45.000+00:00",
+    "name" : "Tags",
+    "variable" : "tags",
+    "sortOrder" : 2,
+    "fieldType" : "Tag",
+    "fieldTypeLabel" : "Tag",
+    "iDate" : "2020-04-20T19:32:23.000+00:00",
+    "dataType" : "SYSTEM"
+  } ],
+  "workflows" : [ {
+    "id" : "d61a59e1-a49c-46f2-a929-db2b4bfa88b2",
+    "variableName" : "SystemWorkflow"
+  } ],
+  "dotCMSObjectType" : "ContentType"
+}

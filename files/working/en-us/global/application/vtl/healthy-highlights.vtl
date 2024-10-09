@@ -1,0 +1,24 @@
+<div class="highlights">
+	<h1>Healthy Highlights</h1>
+
+	<ul id="highlights" class="hh rslides rslides1 rslides4 rslides5">    
+
+			<li id="rslides5_s0" class="rslides1_on item1 rslides5_on rslides4_on" style="float: left; position: relative; opacity: 1; z-index: 2; transition: opacity 1000ms ease-in-out;">
+                <ul>
+                    #foreach($healthyHighlight in $dotcontent.pull("+contentType:HealthyHighlights +(conhost:$!{host.identifier} conhost:SYSTEM_HOST)  +(HealthyHighlights.hostSelector:*$!{host.hostName}* HealthyHighlights.hostSelector:*System Host*)",0,"HealthyHighlights.publishDate desc"))
+                <li>
+                    <div class="img-wrap"><img src="$!{healthyHighlight.image.shortyUrl}" alt="$!{healthyHighlight.title}"></div>
+                    <h2><a href="$!{healthyHighlight.buttonUrl}" target="_self">$!{healthyHighlight.title}</a></h2>
+                    <p>$!{healthyHighlight.caption}</p>
+                    <div class="learn-more">
+                    <a href="$!{healthyHighlight.buttonUrl}" target="_self">Learn More</a>
+                    </div>
+                    <input type="hidden" value="6bc61d2c-9dac-4f15-a7f6-4e45e912d721">
+                </li>
+                #end
+                </ul>
+            </li>
+	</ul>
+
+  <a href="#" class="rslides_nav rslides5_nav prev">Previous</a><a href="#" class="rslides_nav rslides5_nav next">Next</a><ul class="rslides_tabs rslides5_tabs"><li class="rslides5_s1 rslides_here"><a href="#" class="rslides5_s1" role="button">1</a></li><li class="rslides5_s2"><a href="#" class="rslides5_s2" role="button">2</a></li></ul><a href="#" class="rslides_nav rslides4_nav prev">Previous</a><a href="#" class="rslides_nav rslides4_nav next">Next</a><ul class="rslides_tabs rslides4_tabs"><li class="rslides4_s1 rslides_here"><a href="#" class="rslides4_s1" role="button">1</a></li><li class="rslides4_s2"><a href="#" class="rslides4_s2" role="button">2</a></li></ul><ul class="rslides_tabs rslides1_tabs"><li class="rslides1_s1 rslides_here"><a href="#" class="rslides1_s1" role="button">1</a></li><li class="rslides1_s2 last"><a href="#" class="rslides1_s2" role="button">2</a></li></ul>
+	</div>

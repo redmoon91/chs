@@ -1,0 +1,91 @@
+#set($myRawJson = $json.fetch("https://chs.dotcms.io/json/sample-api-data.json"))
+
+<style>
+    ul.results {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    }
+
+    ul.results li {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        margin-bottom: 20px; /* Add some spacing between items */
+        border-bottom: 1px solid #ccc; /* Optional: For visual separation */
+        padding-bottom: 20px;
+    }
+
+    ul.results .img-wrap {
+        flex: 0 0 150px; /* Set the width for the image container */
+        margin-right: 20px;
+    }
+
+    ul.results .img-wrap img {
+        width: 100%;
+        height: auto;
+    }
+
+    ul.results .details {
+        flex: 1; /* Let the details take the remaining space */
+    }
+
+    ul.results .details h2 {
+        margin-top: 0;
+    }
+
+    ul.results .specialty, ul.results .contact {
+        margin-top: 10px;
+    }
+    ul.results .phone {
+        display: inline-block; /* Ensure it displays inline but as a block element */
+        margin-top: 10px;
+        font-weight: bold; /* Make the phone number more prominent */
+        color: #333; /* Set the color for visibility */
+    }
+
+    ul.results .phone a {
+        display: inline-block; /* Ensure the phone link is visible */
+        text-decoration: none; /* Remove underline from the link */
+        color: inherit; /* Make the phone link inherit the color from the span */
+    }
+
+
+</style>
+
+<ul class="results">
+  #foreach($person in $myRawJson.data)
+      <li>
+        <div class="img-wrap">
+            <img src="https://www.grandviewhealth.com/uploads/formuploads/public/1295739274.jpg" title="Aldana Alvaro, MD" alt="Aldana Alvaro, MD" data-photo="/Uploads/FormUploads/Public/1295739274.jpg">
+        </div>
+        <div class="details">
+            <h2>
+                <a href="https://www.grandviewhealth.com/find-a-doctor/aldana-alvaro-md-10412" target="_self">
+                    $!{person.name}, $!{person.credentials}
+                </a>
+            </h2>
+
+            <hr>
+            <div class="specialty">
+              #foreach($specialty in $!{person.specialty})
+                $!{specialty.primary}, $!{specialty.secondary}
+              #end
+            </div>
+            <p class="contact last">
+                <span class="addr">Alabama Cardiovascular Group <br></span>
+                <span class="addr">3680 Grandview Parkway Ste 200 <br></span>
+                <span class="addr">Birmingham, AL</span>
+                <span class="addr">35243 <br></span>
+                <span class="phone">Phone:&nbsp;
+                    <strong>
+                        <a href="tel:$!{person.phone}">$!{person.phone}</a>
+                    </strong>
+                </span>
+                <a href="http://maps.google.com/maps?daddr=3680 Grandview Parkway Ste 200 , Birmingham , AL 35243" target="_blank">View Map</a>
+            </p>
+
+          </div>
+      </li>
+  #end
+</ul>

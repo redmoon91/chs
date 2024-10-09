@@ -1,0 +1,376 @@
+{
+    "data": [
+        {
+            "name": "Henry Fonda",
+            "gender": "m",
+            "phone": "123-456-7890",
+            "services": [
+                {
+                    "primary": "Cardiology",
+                    "secondary": null
+                }
+            ],
+            "credentials": "MD",
+            "providerType": "Employed",
+            "education": [
+                {
+                    "Undergraduate": "University of I Dunno",
+                    "MedicalSchool": "Cardiology Care of Nowhere",
+                    "Fellowship": "I Tried",
+                    "BoardCertification": "Yes"
+                }
+            ],
+            "providerImageUrl": "http://www.api-test-dotcms.com.php8-41.phx1-2.websitetestlink.com/images/providers/provider_man.webp",
+            "location": [
+                {
+                    "name": "Heart Care of Nowhere",
+                    "street": "1234 Apparition Ct",
+                    "city": "Nowhere",
+                    "state": "TN",
+                    "zip": "37067"
+                }
+            ]
+        },
+        {
+            "name": "Jerry Lewis",
+            "gender": "m",
+            "phone": "123-456-7890",
+            "services": [
+                {
+                    "primary": "Primary Care",
+                    "secondary": "Pediatrics"
+                }
+            ],
+            "credentials": "MD",
+            "providerType": "Independent",
+            "education": [
+                {
+                    "Undergraduate": "University of I Dunno",
+                    "MedicalSchool": "Family Care of Nowhere",
+                    "Fellowship": "null",
+                    "BoardCertification": "Maybe"
+                }
+            ],
+            "providerImageUrl": "http://www.api-test-dotcms.com.php8-41.phx1-2.websitetestlink.com/images/providers/provider_man.webp",
+            "location": [
+                {
+                    "name": "Primary Care of Nowhere",
+                    "street": "1234 Apparition Ct",
+                    "city": "Nowhere",
+                    "state": "TN",
+                    "zip": "37067"
+                }
+            ]
+        },
+        {           
+            "name": "Rodney Dangerfield",
+            "gender": "m",
+            "phone": "123-456-7890",
+            "services": [
+                {
+                    "primary": "Podiatry",
+                    "secondary": null
+                }
+            ],
+            "credentials": "MD",
+            "providerType": "Independent",
+            "education": [
+                {
+                    "Undergraduate": "University of I Dunno",
+                    "MedicalSchool": "Podiatry of Nowhere",
+                    "Fellowship": "I Tried",
+                    "BoardCertification": "Yes"
+                }
+            ],
+            "providerImageUrl": "http://www.api-test-dotcms.com.php8-41.phx1-2.websitetestlink.com/images/providers/provider_man.webp",
+            "location": [
+                {
+                    "name": "Podiatry of Nowhere",
+                    "street": "1234 Apparition Ct",
+                    "city": "Nowhere",
+                    "state": "TN",
+                    "zip": "37067"
+                }
+            ]
+        },
+        {
+            "name": "Audrey Hepburn",
+            "gender": "f",
+            "phone": "123-456-7890",
+            "services": [
+                {
+                    "primary": "Obstetrics",
+                    "secondary": null
+                }
+            ],
+            "credentials": "MD",
+            "providerType": "Independent",
+            "education": [
+                {
+                    "Undergraduate": "University of I Dunno",
+                    "MedicalSchool": "OB Care of Nowhere",
+                    "Fellowship": "I Tried",
+                    "BoardCertification": "No"
+                }
+            ],
+            "providerImageUrl": "http://www.api-test-dotcms.com.php8-41.phx1-2.websitetestlink.com/images/providers/provider_woman.webp",
+            "location": [
+                {
+                    "name": "Women's Health of Nowhere",
+                    "street": "1234 Apparition Ct",
+                    "city": "Nowhere",
+                    "state": "TN",
+                    "zip": "37067"
+                }
+            ]
+        },
+        {
+            "name": "Sophia Loren",
+            "gender": "f",
+            "phone": "123-456-7890",
+            "services": [
+                {
+                    "primary": "Primary Care",
+                    "secondary": "Family Care"
+                }
+            ],
+            "credentials": "MD",
+            "providerType": "Employed",
+            "education": [
+                {
+                    "Undergraduate": "University of I Dunno",
+                    "MedicalSchool": "Family Care of Nowhere",
+                    "Fellowship": "I Tried",
+                    "BoardCertification": null
+                }
+            ],
+            "providerImageUrl": "http://www.api-test-dotcms.com.php8-41.phx1-2.websitetestlink.com/images/providers/provider_woman.webp",
+            "location": [
+                {
+                    "name": "Family Care of Nowhere",
+                    "street": "1234 Apparition Ct",
+                    "city": "Nowhere",
+                    "state": "TN",
+                    "zip": "37067"
+                }
+            ]
+        },
+        {
+            "name": "Cary Grant",           
+            "gender": "m",
+            "phone": "123-456-7890",
+            "services": [
+                {
+                    "primary": "Cardiology",
+                    "secondary": null
+                }
+            ],
+            "credentials": "MD",
+            "providerType": "Independent",
+            "education": [
+                {
+                    "Undergraduate": "null",
+                    "MedicalSchool": "Cardiology Care of Nowhere",
+                    "Fellowship": null,
+                    "BoardCertification": "Yes"
+                }
+            ],
+            "providerImageUrl": "http://www.api-test-dotcms.com.php8-41.phx1-2.websitetestlink.com/images/providers/provider_man.webp",
+            "location": [
+                {
+                    "name": "Cardiology of Nowhere",
+                    "street": "1234 Apparition Ct",
+                    "city": "Nowhere",
+                    "state": "TN",
+                    "zip": "37067"
+                }
+            ]
+        },
+        {
+            "name": "Ingrid Bergman",
+            "gender": "f",
+            "phone": "123-456-7890",
+            "services": [
+                {
+                    "primary": "Primary Care",
+                    "secondary": "Internal Medicine"
+                }
+            ],
+            "credentials": "MD",
+            "providerType": "Employed",
+            "education": [
+                {
+                    "Undergraduate": "University of I Dunno",
+                    "MedicalSchool": "Family Care of Nowhere",
+                    "Fellowship": null,
+                    "BoardCertification": null
+                }
+            ],
+            "providerImageUrl": "http://www.api-test-dotcms.com.php8-41.phx1-2.websitetestlink.com/images/providers/provider_woman.webp",
+            "location": [
+                {
+                    "name": "Internal Medicine of Nowhere",
+                    "street": "1234 Apparition Ct",
+                    "city": "Nowhere",
+                    "state": "TN",
+                    "zip": "37067"
+                }
+            ]
+        },
+        {
+            "name": "Katharine Hepburn",
+            "gender": "f",
+            "phone": "123-456-7890",
+            "services": [
+                {
+                    "primary": "Family Care",
+                    "secondary": "Pediatrics"
+                }
+            ],
+            "credentials": "MD",
+            "providerType": "Employed",
+            "education": [
+                {
+                    "Undergraduate": "University of I Dunno",
+                    "MedicalSchool": "Family Care of Nowhere",
+                    "Fellowship": "I Tried",
+                    "BoardCertification": "Yes"
+                }
+            ],
+            "providerImageUrl": "http://www.api-test-dotcms.com.php8-41.phx1-2.websitetestlink.com/images/providers/provider_woman.webp",
+            "location": [
+                {
+                    "name": "Family Care of Nowhere",
+                    "street": "1234 Apparition Ct",
+                    "city": "Nowhere",
+                    "state": "TN",
+                    "zip": "37067"
+                }
+            ]
+        },
+        {
+            "name": "Kirk Douglas",
+            "gender": "m",
+            "phone": "123-456-7890",
+            "services": [
+                {
+                    "primary": "Internal Medicine",
+                    "secondary": "Gastroenterology"
+                }
+            ],
+            "credentials": "MD",
+            "providerType": "Employed",
+            "education": [
+                {
+                    "Undergraduate": "University of I Dunno",
+                    "MedicalSchool": "Family Care of Nowhere",
+                    "Fellowship": "I Tried",
+                    "BoardCertification": "Yes"
+                }
+            ],
+            "providerImageUrl": "http://www.api-test-dotcms.com.php8-41.phx1-2.websitetestlink.com/images/providers/provider_man.webp",
+            "location": [
+                {
+                    "name": "Internal Medicine of Nowhere",
+                    "street": "1234 Apparition Ct",
+                    "city": "Nowhere",
+                    "state": "TN",
+                    "zip": "37067"
+                }
+            ]
+        },
+        {
+            "name": "James Cagney",
+            "gender": "m",
+            "phone": "123-456-7890",
+            "services": [
+                {
+                    "primary": "Family Medicine",
+                    "secondary": "Pediatrics"
+                }
+            ],
+            "credentials": "MD",
+            "providerType": "Employed",
+            "education": [
+                {
+                    "Undergraduate": null,
+                    "MedicalSchool": "Family Care of Nowhere",
+                    "Fellowship": "I Tried",
+                    "BoardCertification": "Yes"
+                }
+            ],
+            "providerImageUrl": "http://www.api-test-dotcms.com.php8-41.phx1-2.websitetestlink.com/images/providers/provider_man.webp",
+            "location": [
+                {
+                    "name": "Pediatric Care of Nowhere",
+                    "street": "1234 Apparition Ct",
+                    "city": "Nowhere",
+                    "state": "TN",
+                    "zip": "37067"
+                }
+            ]
+        },
+        {
+            "name": "Bette Davis",
+            "gender": "f",
+            "phone": "123-456-7890",
+            "services": [
+                {
+                    "primary": "Cardiology",
+                    "secondary": "Interventional Cardiology"
+                }
+            ],
+            "credentials": "MD",
+            "providerType": "Employed",
+            "education": [
+                {
+                    "Undergraduate": "University of I Dunno",
+                    "MedicalSchool": "Heart Care of Nowhere",
+                    "Fellowship": null,
+                    "BoardCertification": "No"
+                }
+            ],
+            "providerImageUrl": "http://www.api-test-dotcms.com.php8-41.phx1-2.websitetestlink.com/images/providers/provider_woman.webp",
+            "location": [
+                {
+                    "name": "Cardiologists of Nowhere",
+                    "street": "1234 Apparition Ct",
+                    "city": "Nowhere",
+                    "state": "TN",
+                    "zip": "37067"
+                }
+            ]
+        },
+        {
+            "name": "Rita Hayworth",
+            "gender": "female",
+            "phone": "123-456-7890",
+            "services": [
+                {
+                    "primary": "Cardiology",
+                    "secondary": "Cardiothoracic Surgery"
+                }
+            ],
+            "credentials": "MD",
+            "providerType": "Independent",
+            "education": [
+                {
+                    "Undergraduate": null,
+                    "MedicalSchool": "Heart Care of Nowhere",
+                    "Fellowship": "I Tried",
+                    "BoardCertification": null
+                }
+            ],
+            "providerImageUrl": "http://www.api-test-dotcms.com.php8-41.phx1-2.websitetestlink.com/images/providers/provider_woman.webp",
+            "location": [
+                {
+                    "name": "Cardiologists of Nowhere",
+                    "street": "1234 Apparition Ct",
+                    "city": "Nowhere",
+                    "state": "TN",
+                    "zip": "37067"
+                }
+            ]
+        }
+    ]
+}
